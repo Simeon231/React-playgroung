@@ -20,9 +20,13 @@ function App() {
       Hello world
     </Heading>
 
-    <Ul elements={lorems}></Ul>
+    <Ul elements={lorems} clickHandler={() => AddLi(lorems[0])} ></Ul>
     </div>
   );
+}
+
+function AddLi(li){
+    console.log(li);
 }
 
 export default App;
