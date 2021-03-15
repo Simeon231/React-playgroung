@@ -26,7 +26,7 @@ class Increment extends Component {
 
     render() {
         return (
-            <div className="bg-light ml-5 col-md-3 d-flex justify-content-center align-items-center">
+            <div className="bg-light col-md-3 d-flex justify-content-center align-items-center">
                 <button className="btn btn-primary" onClick={(e) => this.decrementCounter(e)}>-</button>
                 <span className="ml-2 mr-2">{this.state.count}</span>
                 <button className="btn btn-primary" onClick={this.incrementCounter.bind(this)}>+</button>
