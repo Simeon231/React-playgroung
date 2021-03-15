@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Heading from './components/Heading';
-import Ul from './components/Ul'
+import Ul from './components/Ul';
+import Increment from './components/Increment';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const lorems = [
@@ -11,7 +13,10 @@ const lorems = [
 
 function App() {
   return (
-    <div>
+    <div className="container mt-5">
+      <div className="d-flex justify-content-center">
+        <Increment />
+      </div>
     <Heading >
       Hello world
     </Heading>
