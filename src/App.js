@@ -3,6 +3,7 @@ import Heading from './components/Heading';
 import Ul from './components/Ul';
 import Increment from './components/Main/Increment';
 import Nav from './components/Header/Nav';
+import BootstrapNav from './components/Header/BootstrapNav';
 import { Route, Link, NavLink, Redirect, Switch, BrowserRouter, Router } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +26,7 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <Nav />
+                <BootstrapNav />
                 <div className="container mt-5">
                     <Switch>
                         <Route path="/Increment" exact>
