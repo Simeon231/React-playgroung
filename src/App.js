@@ -8,21 +8,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const lorems = [
     {
-        id: 1,
+        id: "l1",
         value: 'Anim mollit fugiat enim cupidatat et proident ex non deserunt labore aute et.',
     },
     {
-        id: 2,
+        id: "l2",
         value: 'Ad velit irure incididunt excepteur veniam est.',
     },
     {
-        id: 3,
+        id: "l3",
         value: 'Irure officia commodo aliqua consectetur dolor deserunt enim elit cupidatat culpa pariatur.'
     }];
 
 function App() {
     return (
-        <div>
+        <>
             <Nav />
             <div className="container mt-5">
                 <div className="d-flex justify-content-center">
@@ -30,11 +30,11 @@ function App() {
                 </div>
                 <Heading >
                     Hello world
-      </Heading>
+                </Heading>
 
                 <Ul elements={lorems} clickHandler={() => AddLi(lorems[0].value)} ></Ul>
             </div>
-        </div>
+        </>
     );
 }
 
