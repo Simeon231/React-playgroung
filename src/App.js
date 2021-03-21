@@ -1,5 +1,5 @@
 import './App.css';
-import Heading from './components/Heading';
+import Heading from './components/Main/Heading';
 import Ul from './components/Main/Ul';
 import Increment from './components/Main/Increment';
 import Nav from './components/Header/Nav';
