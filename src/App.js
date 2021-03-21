@@ -1,6 +1,6 @@
 import './App.css';
 import Heading from './components/Heading';
-import Ul from './components/Ul';
+import Ul from './components/Main/Ul';
 import Increment from './components/Main/Increment';
 import Nav from './components/Header/Nav';
 import BootstrapNav from './components/Header/BootstrapNav';
