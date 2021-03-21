@@ -3,7 +3,7 @@ import Heading from './components/Heading';
 import Ul from './components/Ul';
 import Increment from './components/Main/Increment';
 import Nav from './components/Header/Nav';
-import { Route, Link, NavLink, Redirect, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Link, NavLink, Redirect, Switch, BrowserRouter, Router } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,10 +23,10 @@ const lorems = [
 
 function App() {
     return (
-        <div>
-            <Nav />
-            <div className="container mt-5">
-                <BrowserRouter>
+        <>
+            <BrowserRouter>
+                <Nav />
+                <div className="container mt-5">
                     <Switch>
                         <Route path="/Increment" exact>
                             <div className="d-flex justify-content-center">
@@ -36,15 +36,16 @@ function App() {
                         <Route path="/" exact>
                             <Heading >
                                 Hello world
-                    </Heading>
+                            </Heading>
+                        </Route>
+                        <Route path="/Ul" exact>
+                            <Ul elements={lorems} clickHandler={() => AddLi(lorems[0].value)} ></Ul>
                         </Route>
                         <Route render={() => <h1 >Error Page</h1>} />
                     </Switch>
-                </BrowserRouter>
-
-                <Ul elements={lorems} clickHandler={() => AddLi(lorems[0].value)} ></Ul>
-            </div>
-        </div>
+                </div>
+            </BrowserRouter>
+        </>
     );
 }
 
