@@ -27,17 +27,19 @@ function App() {
             <Nav />
             <div className="container mt-5">
                 <BrowserRouter>
-                    <Route path="/Increment" exact>
-                        <div className="d-flex justify-content-center">
-                            <Increment />
-                        </div>
-                    </Route>
-                    <Route path="/" exact>
-                        <Heading >
-                            Hello world
+                    <Switch>
+                        <Route path="/Increment" exact>
+                            <div className="d-flex justify-content-center">
+                                <Increment />
+                            </div>
+                        </Route>
+                        <Route path="/" exact>
+                            <Heading >
+                                Hello world
                     </Heading>
-                    </Route>
-                    <Route render={() => <h1 >Error Page</h1>} />
+                        </Route>
+                        <Route render={() => <h1 >Error Page</h1>} />
+                    </Switch>
                 </BrowserRouter>
 
                 <Ul elements={lorems} clickHandler={() => AddLi(lorems[0].value)} ></Ul>
